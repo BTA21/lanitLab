@@ -18,10 +18,14 @@ public class Stack extends Item{
         } else {
             System.out.println("\n Стопка не выдержит!");
         }
-
-
-//        super.getInfo(item);
     }
+
+    public void putInQuestion(){
+        System.out.println("\n Пользователь: Можно ли дополнить стопку?");
+        String answer = (this.stackArr.size()<this.qt)?"Компьютер: Да!":"Компьютер: Нет!";
+        System.out.println(answer);
+    }
+
     public void pullOut(Boolean rand, Item item){
         if (rand == true) {
             int max = this.stackArr.size();
@@ -40,8 +44,8 @@ public class Stack extends Item{
 
     void getInfo(Item stack) {
         super.getInfo(stack);
-        System.out.println("\n Лимит предметов, которые можно поместить:" + this.qt);
-
+        System.out.println("\n Лимит предметов, которые можно поместить:" + this.qt + ".\n" +
+                "================================================================================================= \n");
     }
 
     void getInfoInside() {

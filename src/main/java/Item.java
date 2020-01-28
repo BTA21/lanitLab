@@ -43,14 +43,16 @@ public class Item {
     public Boolean getFlat() {
         return flat;
     }
+
     void getInfo(Item item){
-        System.out.println(item);
+        System.out.print(item);
     }
 
     public String toString() {
-        String isFlat = this.flat? "являющимся плоским.":"не являющимся плоским.";
-        return "===================================================================================== \n" +
-        "Описание объекта: \n" +this.name + " с весом " + this.weight + ", имеющим объем " +this.volume + " и " + isFlat;
+        String isFlat = this.flat? "является плоским.":"не является плоским.";
+        return "================================================================================================= \n" +
+        "Описание объекта: \n" +this.name + " с весом " + this.weight +
+                ", имеющим объем " +this.volume + ", который " + isFlat;
     }
 
 }

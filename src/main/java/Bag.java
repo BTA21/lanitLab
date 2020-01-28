@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Bag extends Item{
     private Double limit;
@@ -16,30 +17,31 @@ public class Bag extends Item{
             System.out.println("\n Мешок не выдержит!");
         }
 
-
-//        super.getInfo(item);
     }
-    public void pullOut(Boolean rand, Item item){
-        if (rand == true) {
-            int max = this.bagArr.size();
-            int index = (int) Math.random() * max;
-            this.bagArr.remove(index);
-            this.limit += item.getWeight();
-        }
+    public void pullOut(){
+        int max = this.bagArr.size();
+        Random random = new Random();
+        int index = random.nextInt(max);
+        Item item = this.bagArr.get(index);
+        this.bagArr.remove(index);
+        this.limit += item.getWeight();
     }
 
     public void pullOut(String name){
-        for (Item anArray: bagArr){
-            if(anArray.getName() == name){
-                this.bagArr.remove(anArray);
+        for (int index = 0; index<this.bagArr.size(); index++){
+            Item item = this.bagArr.get(index);
+            if (item.getName()==name){
+                this.bagArr.remove(index);
+                this.limit += item.getWeight();
+                break;
             }
         }
     }
 
     void getInfo(Item bag) {
         super.getInfo(bag);
-        System.out.println("\n Лимит веса:" + this.limit);
-
+        System.out.print(" Лимит веса:" + this.limit + ".\n" +
+                "================================================================================================= \n");
     }
 
     void getInfoInside() {
