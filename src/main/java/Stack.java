@@ -14,7 +14,7 @@ public class Stack extends Item{
             if(item.getFlat()==true) {
                 this.stackArr.add(0, item);
             } else
-                System.out.println("\n В стопки можно класть только плоские предметы!");
+                System.out.println("\n Стопки можно складывать только из плоских предметов!");
         } else {
             System.out.println("\n Стопка не выдержит!");
         }
@@ -22,30 +22,19 @@ public class Stack extends Item{
 
     public void putInQuestion(){
         System.out.println("\n Пользователь: Можно ли дополнить стопку?");
-        String answer = (this.stackArr.size()<this.qt)?"Компьютер: Да!":"Компьютер: Нет!";
+        String answer = (this.stackArr.size()<this.qt)?" Компьютер: Да!":" Компьютер: Нет!";
         System.out.println(answer);
     }
 
-    public void pullOut(Boolean rand, Item item){
-        if (rand == true) {
-            int max = this.stackArr.size();
-            int index = (int) Math.random() * max;
-            this.stackArr.remove(index);
-        }
-    }
-
-    public void pullOut(String name){
-        for (Item anArray: stackArr){
-            if(anArray.getName() == name){
-                this.stackArr.remove(anArray);
-            }
-        }
+    public void pullOut(){
+            int index = this.stackArr.size();
+            this.stackArr.remove(0);
     }
 
     void getInfo(Item stack) {
         super.getInfo(stack);
-        System.out.println("\n Лимит предметов, которые можно поместить:" + this.qt + ".\n" +
-                "================================================================================================= \n");
+        System.out.println(" Лимит предметов, которые можно поместить: " + this.qt + ".\n" +
+                "============================================================================================================== \n");
     }
 
     void getInfoInside() {

@@ -3,12 +3,14 @@ public class Item {
     private Double weight;
     private Integer volume;//объем
     private Boolean flat;//плоский или нет
+    private Boolean amIinsideYet;//вложен ли куда-нибудь объект
 
     Item(String name, Double weight, Integer volume, Boolean flat){
         this.name = name;
         this.weight = weight;
         this.volume = volume;
         this.flat = flat;
+        this.amIinsideYet = false;//объект при создании никуда не помещён
     }
 
     public void setFlat(Boolean flat) {
@@ -50,7 +52,7 @@ public class Item {
 
     public String toString() {
         String isFlat = this.flat? "является плоским.":"не является плоским.";
-        return "================================================================================================= \n" +
+        return "\n============================================================================================================== \n" +
         "Описание объекта: \n" +this.name + " с весом " + this.weight +
                 ", имеющим объем " +this.volume + ", который " + isFlat;
     }

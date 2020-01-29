@@ -20,7 +20,7 @@ public class Run {
         Stack stack1 = new Stack("Стопка", 0.1d, 10, true, 3);
 
 //        Коробки
-        Box box1 = new Box("Коробка", 0.5d, 4,true, 20.0d);
+        Box box1 = new Box("Коробка", 0.5d, 4,true, 20.0d, false);
 
 
 //        item1.getInfo(item1);
@@ -60,7 +60,7 @@ public class Run {
         stack1.putInQuestion();
 
 
-        stack1.pullOut(true, item1);
+        stack1.pullOut();
         stack1.getInfoInside();
 
 //        bag1.getInfo(bag1);
