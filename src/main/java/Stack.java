@@ -21,17 +21,19 @@ public class Stack extends Item{
         }
     }
 
-    public void putInQuestion(){
+    public String putInQuestion(){
         System.out.println("\n Пользователь: Можно ли дополнить стопку?");
         String answer = (this.stackArr.size()<this.qt)?" Компьютер: Да!":" Компьютер: Нет!";
         System.out.println(answer);
+        return answer;
     }
 
     public void pullOut(){
-            int index = this.stackArr.size();
-            this.stackArr.remove(0);
-            Item item = this.stackArr.get(index);
-            this.weight -= item.getWeight();
+        int index = this.stackArr.size();
+        Item item = this.stackArr.get(0);
+        this.weight -= item.getWeight();
+        this.stackArr.remove(0);
+
     }
 
     void getInfo(Item stack) {

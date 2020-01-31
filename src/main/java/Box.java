@@ -38,6 +38,10 @@ public class Box extends Item{
             System.out.println("\n Чтобы что-нибудь вытащить из коробки, её сначала нужно открыть!");
     }
 
+    public Boolean getOpenState() {
+        return openState;
+    }
+
     public void pullOut(String name){
         if(this.openState!=false) {
             for (int index = 0; index<this.boxArr.size(); index++){
