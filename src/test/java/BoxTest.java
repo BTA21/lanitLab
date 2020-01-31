@@ -11,32 +11,46 @@ class BoxTest {
     Item item2 = new Item("Игрушка1", 0.3d, 2,false);
     Item item3 = new Item("Мяч2", 0.5d, 4,false);
     Item item4 = new Item("Игрушка2", 0.2d, 2,false);
-    Item item5 = new Item("Книга1", 0.5d, 4,true);//  Плоский предмет
+    Item item5 = new Item("Книга1", 50d, 4,true);//  Плоский предмет
 
 
     @Test
     void putIn() {
         box.openBox();
-        box.putIn(item1);
-        box.putIn(item2);
-        box.putIn(item3);
-        box.putIn(item4);
-        box.putIn(item5);
-        Double expected = 4d;
+        try {
+            box.putIn(item1);
+            box.putIn(item2);
+            box.putIn(item3);
+            box.putIn(item4);
+        } catch (ItemStoreExeption e) {
+        e.printStackTrace();
+    }
+        Double expected = 3.5d;
         Double actual = box.weight;
         assertEquals(expected, actual);
     }
 
+//    @Test(expected=ItemStoreExeption.class)
+//    void putInException() {
+//        try{
+//            box.putIn(item5);
+//        } catch (ItemStoreExeption e) {
+//            e.printStackTrace();
+//        }
+//    }
+
     @Test
     void pullOut() {
         box.openBox();
-        box.putIn(item1);
-        box.putIn(item2);
-        box.putIn(item3);
-        box.putIn(item4);
-        box.putIn(item5);
+        try {
+            box.putIn(item1);
+            box.putIn(item2);
+            box.putIn(item3);
+        } catch (ItemStoreExeption e) {
+        e.printStackTrace();
+    }
         box.pullOut("Игрушка1");
-        Double expected = 3.7d;
+        Double expected = 3.0d;
         Double actual = box.weight;
         assertEquals(expected, actual);
     }
@@ -44,13 +58,15 @@ class BoxTest {
     @Test
     void testPullOut() {
         box.openBox();
-        box.putIn(item1);
-        box.putIn(item2);
-        box.putIn(item3);
-        box.putIn(item4);
-        box.putIn(item5);
+        try {
+            box.putIn(item1);
+            box.putIn(item2);
+            box.putIn(item3);
+        } catch (ItemStoreExeption e) {
+        e.printStackTrace();
+    }
         box.pullOut();
-        Double expected = 3.5d;
+        Double expected = 3.0d;
         Double actual = box.weight;
         assertEquals(expected, actual);
     }

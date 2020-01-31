@@ -9,16 +9,15 @@ public class Bag extends Item{
         this.bagArr = new ArrayList<Item>(0);
         this.limit = limit;
     }
-    public void putIn(Item item){
-        if(this.limit>=item.getWeight()) {
+    public void putIn(Item item) throws ItemStoreExeption {
+        if(this.limit<item.getWeight()) {
+            throw new ItemStoreExeption("You exceed bag limits!");
+        }
             this.bagArr.add(item);
             this.limit -= item.getWeight();
             this.weight += item.getWeight();
-        } else {
-            System.out.println("\n Мешок не выдержит!");
-        }
-
     }
+
     public void pullOut(){
         int max = this.bagArr.size();
         Random random = new Random();

@@ -11,17 +11,16 @@ public class Box extends Item{
         this.limit = limit;
         this.openState = openState;
     }
-    public void putIn(Item item){
-        if(this.limit>=item.getWeight()) {
+    public void putIn(Item item) throws ItemStoreExeption {
+        if(this.limit<item.getWeight()) {
+            throw new ItemStoreExeption("You exceed bag limits!");
+        }
             if(this.openState!=false){
             this.boxArr.add(item);
             this.limit -= item.getWeight();
             this.weight += item.getWeight();
             } else
                 System.out.println("\n Чтобы положить что-нибудь в коробку, её сначала нужно открыть!");
-        } else {
-            System.out.println("\n Коробка не выдержит!");
-        }
     }
 
 

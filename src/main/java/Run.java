@@ -25,12 +25,14 @@ public class Run {
 //        item1.getInfo(item1);
 //        Работа с мешками
         bag1.getInfo(bag1);
-
-        bag1.putIn(item1);
-        bag1.putIn(item2);
-        bag1.putIn(item3);
-        bag1.putIn(item4);
-
+        try {
+            bag1.putIn(item1);
+            bag1.putIn(item2);
+            bag1.putIn(item3);
+            bag1.putIn(item4);
+        } catch (ItemStoreExeption e){
+        e.printStackTrace();
+    }
         bag1.getInfoInside();
 
         bag1.getInfo(bag1);
@@ -40,18 +42,20 @@ public class Run {
         bag1.getInfoInside();
 
         bag1.getInfo(bag1);
-//
+
 
 
 //        Работа со стопкой
-
+//    try {
 //        stack1.putIn(item1);
 //        stack1.putIn(item5);
 //        stack1.putIn(item6);
 //        stack1.putIn(item7);
 //        stack1.putIn(item8);
 //        stack1.putIn(item9);
-//
+//    } catch (ItemStoreExeption e){
+//        e.printStackTrace();
+//    }
 //        stack1.getInfoInside();
 //
 //        stack1.getInfo(stack1);

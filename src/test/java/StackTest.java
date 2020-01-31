@@ -13,16 +13,28 @@ class StackTest {
 
     @Test
     void putIn() {
-        stack.putIn(item1);
-        stack.putIn(item2);
-        stack.putIn(item3);
-        stack.putIn(item4);
-        stack.putIn(item5);
-        stack.putIn(item6);
+        try {
+            stack.putIn(item1);
+            stack.putIn(item2);
+            stack.putIn(item3);
+            stack.putIn(item4);
+            } catch (ItemStoreExeption e) {
+        e.printStackTrace();
+    }
         Double expected = 3d;
         Double actual = stack.weight;
         assertEquals(expected, actual);
     }
+
+//    @Test(expected=ItemStoreExeption.class)
+//    void putInException() {
+//        try{
+//            stack.putIn(item1);
+//            stack.putIn(item5);
+//        } catch (ItemStoreExeption e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     @Test
     void putInQuestion1() {
@@ -33,12 +45,14 @@ class StackTest {
 
     @Test
     void putInQuestion2() {
-        stack.putIn(item1);
-        stack.putIn(item2);
-        stack.putIn(item3);
-        stack.putIn(item4);
-        stack.putIn(item5);
-        stack.putIn(item6);
+        try {
+            stack.putIn(item1);
+            stack.putIn(item2);
+            stack.putIn(item3);
+            stack.putIn(item4);
+           } catch (ItemStoreExeption e) {
+        e.printStackTrace();
+    }
         String actual = stack.putInQuestion();
         String expected = " Компьютер: Нет!";
         assertEquals(expected, actual);
@@ -46,12 +60,14 @@ class StackTest {
 
     @Test
     void pullOut() {
-        stack.putIn(item1);
-        stack.putIn(item2);
-        stack.putIn(item3);
-        stack.putIn(item4);
-        stack.putIn(item5);
-        stack.putIn(item6);
+        try {
+            stack.putIn(item1);
+            stack.putIn(item2);
+            stack.putIn(item3);
+            stack.putIn(item4);
+        } catch (ItemStoreExeption e) {
+        e.printStackTrace();
+    }
         stack.pullOut();
         Double expected = 2d;
         Double actual = stack.weight;

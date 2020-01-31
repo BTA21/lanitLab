@@ -9,16 +9,16 @@ public class Stack extends Item{
         this.qt = qt;
         this.stackArr = new ArrayList<Item>(qt);;
     }
-    public void putIn(Item item){
-        if(this.stackArr.size()<this.qt) {
+
+    public void putIn(Item item) throws ItemStoreExeption {
+        if(this.stackArr.size()>=this.qt) {
+            throw new ItemStoreExeption("You exceed stack limits!");
+        }
             if(item.getFlat()==true) {
                 this.stackArr.add(0, item);
                 this.weight += item.getWeight();
             } else
                 System.out.println("\n Стопки можно складывать только из плоских предметов!");
-        } else {
-            System.out.println("\n Стопка не выдержит!");
-        }
     }
 
     public String putInQuestion(){
