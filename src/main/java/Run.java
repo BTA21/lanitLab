@@ -22,45 +22,45 @@ public class Run {
 //        Коробки
         Box box1 = new Box("Коробка", 0.5d, 4,true, 20.0d, false);
 
-        item1.getInfo(item1);
+//        item1.getInfo(item1);
 //        Работа с мешками
-//        bag1.getInfo(bag1);
-//
-//        bag1.putIn(item1);
-//        bag1.putIn(item2);
-//        bag1.putIn(item3);
-//        bag1.putIn(item4);
-//
-//        bag1.getInfoInside();
-//
-//        bag1.getInfo(bag1);
-//
-//
-//        bag1.pullOut("Игрушка");
-//        bag1.getInfoInside();
-//
-//        bag1.getInfo(bag1);
+        bag1.getInfo(bag1);
+
+        bag1.putIn(item1);
+        bag1.putIn(item2);
+        bag1.putIn(item3);
+        bag1.putIn(item4);
+
+        bag1.getInfoInside();
+
+        bag1.getInfo(bag1);
+
+
+        bag1.pullOut("Игрушка1");
+        bag1.getInfoInside();
+
+        bag1.getInfo(bag1);
 //
 
 
 //        Работа со стопкой
 
-        stack1.putIn(item1);
-        stack1.putIn(item5);
-        stack1.putIn(item6);
-        stack1.putIn(item7);
-        stack1.putIn(item8);
-        stack1.putIn(item9);
-
-        stack1.getInfoInside();
-
-        stack1.getInfo(stack1);
-
-        stack1.putInQuestion();
-
-
-        stack1.pullOut();
-        stack1.getInfoInside();
+//        stack1.putIn(item1);
+//        stack1.putIn(item5);
+//        stack1.putIn(item6);
+//        stack1.putIn(item7);
+//        stack1.putIn(item8);
+//        stack1.putIn(item9);
+//
+//        stack1.getInfoInside();
+//
+//        stack1.getInfo(stack1);
+//
+//        stack1.putInQuestion();
+//
+//
+//        stack1.pullOut();
+//        stack1.getInfoInside();
 
 //        bag1.getInfo(bag1);
         //        System.out.println("============");

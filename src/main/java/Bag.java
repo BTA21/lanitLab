@@ -13,6 +13,7 @@ public class Bag extends Item{
         if(this.limit>=item.getWeight()) {
             this.bagArr.add(item);
             this.limit -= item.getWeight();
+            this.weight += item.getWeight();
         } else {
             System.out.println("\n Мешок не выдержит!");
         }
@@ -25,6 +26,7 @@ public class Bag extends Item{
         Item item = this.bagArr.get(index);
         this.bagArr.remove(index);
         this.limit += item.getWeight();
+        this.weight -= item.getWeight();
     }
 
     public void pullOut(String name){
@@ -33,6 +35,7 @@ public class Bag extends Item{
             if (item.getName()==name){
                 this.bagArr.remove(index);
                 this.limit += item.getWeight();
+                this.weight -= item.getWeight();
                 break;
             }
         }

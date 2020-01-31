@@ -13,6 +13,7 @@ public class Stack extends Item{
         if(this.stackArr.size()<this.qt) {
             if(item.getFlat()==true) {
                 this.stackArr.add(0, item);
+                this.weight += item.getWeight();
             } else
                 System.out.println("\n Стопки можно складывать только из плоских предметов!");
         } else {
@@ -29,6 +30,8 @@ public class Stack extends Item{
     public void pullOut(){
             int index = this.stackArr.size();
             this.stackArr.remove(0);
+            Item item = this.stackArr.get(index);
+            this.weight -= item.getWeight();
     }
 
     void getInfo(Item stack) {

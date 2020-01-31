@@ -16,6 +16,7 @@ public class Box extends Item{
             if(this.openState!=false){
             this.boxArr.add(item);
             this.limit -= item.getWeight();
+            this.weight += item.getWeight();
             } else
                 System.out.println("\n Чтобы положить что-нибудь в коробку, её сначала нужно открыть!");
         } else {
@@ -32,6 +33,7 @@ public class Box extends Item{
             Item item = this.boxArr.get(index);
             this.boxArr.remove(index);
             this.limit += item.getWeight();
+            this.weight -= item.getWeight();
         } else
             System.out.println("\n Чтобы что-нибудь вытащить из коробки, её сначала нужно открыть!");
     }
@@ -43,6 +45,7 @@ public class Box extends Item{
                 if (item.getName()==name){
                     this.boxArr.remove(index);
                     this.limit += item.getWeight();
+                    this.weight -= item.getWeight();
                     break;
                 }
             }

@@ -1,6 +1,6 @@
 public class Item {
     private String name;
-    private Double weight;
+    protected Double weight;
     private Integer volume;//объем
     private Boolean flat;//плоский или нет
     private Boolean amIinsideYet;//вложен ли куда-нибудь объект
@@ -12,6 +12,7 @@ public class Item {
         this.flat = flat;
         this.amIinsideYet = false;//объект при создании никуда не помещён
     }
+
 
     public void setFlat(Boolean flat) {
         this.flat = flat;
