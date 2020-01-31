@@ -22,8 +22,7 @@ public class Run {
 //        Коробки
         Box box1 = new Box("Коробка", 0.5d, 4,true, 20.0d, false);
 
-
-//        item1.getInfo(item1);
+        item1.getInfo(item1);
 //        Работа с мешками
 //        bag1.getInfo(bag1);
 //
