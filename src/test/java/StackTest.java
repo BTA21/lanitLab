@@ -1,8 +1,8 @@
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class StackTest {
+public class StackTest {
     Stack stack = new Stack("Стопка", 1d, 10, true, 3);
     Item item1 = new Item("Мяч1", 0.2d, 4,false);
     Item item2 = new Item("Книга1", 0.5d, 4,true);//  Плоский предмет
@@ -12,22 +12,22 @@ class StackTest {
     Item item6 = new Item("Книга3", 0.5d, 4,true);//  Плоский предмет
 
     @Test
-    void putIn() {
+    public void putIn() {
         try {
             stack.putIn(item1);
             stack.putIn(item2);
             stack.putIn(item3);
             stack.putIn(item4);
-            } catch (ItemStoreExeption e) {
-        e.printStackTrace();
-    }
-        Double expected = 3d;
+        } catch (ItemStoreExeption e) {
+            e.printStackTrace();
+        }
+        Double expected = 2d;
         Double actual = stack.weight;
         assertEquals(expected, actual);
     }
 
 //    @Test(expected=ItemStoreExeption.class)
-//    void putInException() {
+//    public void putInException() {
 //        try{
 //            stack.putIn(item1);
 //            stack.putIn(item5);
@@ -37,45 +37,45 @@ class StackTest {
 //    }
 
     @Test
-    void putInQuestion1() {
+    public void putInQuestion1() {
         String actual = stack.putInQuestion();
         String expected = " Компьютер: Да!";
         assertEquals(expected, actual);
     }
 
     @Test
-    void putInQuestion2() {
-        try {
-            stack.putIn(item1);
-            stack.putIn(item2);
-            stack.putIn(item3);
-            stack.putIn(item4);
-           } catch (ItemStoreExeption e) {
-        e.printStackTrace();
-    }
-        String actual = stack.putInQuestion();
-        String expected = " Компьютер: Нет!";
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void pullOut() {
+    public void putInQuestion2() {
         try {
             stack.putIn(item1);
             stack.putIn(item2);
             stack.putIn(item3);
             stack.putIn(item4);
         } catch (ItemStoreExeption e) {
-        e.printStackTrace();
+            e.printStackTrace();
+        }
+        String actual = stack.putInQuestion();
+        String expected = " Компьютер: Нет!";
+        assertEquals(expected, actual);
     }
+
+    @Test
+    public void pullOut() {
+        try {
+            stack.putIn(item1);
+            stack.putIn(item2);
+            stack.putIn(item3);
+            stack.putIn(item4);
+        } catch (ItemStoreExeption e) {
+            e.printStackTrace();
+        }
         stack.pullOut();
-        Double expected = 2d;
+        Double expected = 1d;
         Double actual = stack.weight;
         assertEquals(expected, actual);
     }
 
     @Test
-    void testToString() {
+    public void testToString() {
         String isFlat = stack.getFlat()? "является плоским.":"не является плоским.";
         String expected =  "\n============================================================================================================== \n" +
                 "Описание объекта: \n" +stack.getName() + " с весом " + stack.getWeight() +

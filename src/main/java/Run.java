@@ -58,7 +58,7 @@ public class Run {
 //    }
 //        stack1.getInfoInside();
 //
-//        stack1.getInfo(stack1);
+        stack1.getInfo(stack1);
 //
 //        stack1.putInQuestion();
 //

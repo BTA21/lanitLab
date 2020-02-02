@@ -1,8 +1,9 @@
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class BagTest {
+public class BagTest {
+
     Bag bag = new Bag("Мешок", 0.1d, 10, false, 5.0d);
 
     Item item1 = new Item("Мяч1", 0.5d, 4,false);
@@ -12,7 +13,7 @@ class BagTest {
     Item item5 = new Item("Книга1", 5d, 4,true);//  Плоский предмет
 
     @Test
-    void putIn() {
+    public void putIn() {
         try{
             bag.putIn(item1);
             bag.putIn(item2);
@@ -27,7 +28,7 @@ class BagTest {
     }
 
 //    @Test(expected=ItemStoreExeption.class)
-//    void putInException() {
+//    public void putInException() {
 //        try{
 //            bag.putIn(item1);
 //            bag.putIn(item5);
@@ -37,12 +38,12 @@ class BagTest {
 //    }
 
     @Test
-    void pullOut() {
+    public void pullOut() {
         try{
-        bag.putIn(item1);
-        bag.putIn(item2);
-        bag.putIn(item3);
-        bag.putIn(item4);
+            bag.putIn(item1);
+            bag.putIn(item2);
+            bag.putIn(item3);
+            bag.putIn(item4);
         } catch (ItemStoreExeption e) {
             e.printStackTrace();
         }
@@ -53,12 +54,12 @@ class BagTest {
     }
 
     @Test
-    void testPullOut() {
+    public void testPullOut() {
         try {
-        bag.putIn(item1);
-        bag.putIn(item2);
-        bag.putIn(item3);
-        bag.putIn(item4);
+            bag.putIn(item1);
+            bag.putIn(item2);
+            bag.putIn(item3);
+            bag.putIn(item4);
         } catch (ItemStoreExeption e) {
             e.printStackTrace();
         }
@@ -70,7 +71,7 @@ class BagTest {
     }
 
     @Test
-    void testToString() {
+    public void testToString() {
         String isFlat = bag.getFlat()? "является плоским.":"не является плоским.";
         String expected =  "\n============================================================================================================== \n" +
                 "Описание объекта: \n" +bag.getName() + " с весом " + bag.getWeight() +
@@ -78,5 +79,4 @@ class BagTest {
         String actual =bag.toString();
         assertEquals(expected, actual);
     }
-
-  }
+}

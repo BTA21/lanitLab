@@ -1,13 +1,14 @@
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
 public class Stack extends Item{
     private Integer qt;
     private ArrayList<Item> stackArr;
     private Integer counter;
     Stack(String name, Double weight, Integer volume, Boolean flat, Integer qt) {
-        super(name, weight, volume, flat);
+        super(name, weight = 0d, volume, flat);
         this.qt = qt;
-        this.stackArr = new ArrayList<Item>(qt);;
+        this.stackArr = new ArrayList<Item>(qt);
     }
 
     public void putIn(Item item) throws ItemStoreExeption {

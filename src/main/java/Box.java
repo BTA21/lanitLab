@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Box extends Item{
+public class Box extends Item implements BoxI {
     private Double limit;
     private Boolean openState;
     private ArrayList<Item> boxArr;
@@ -56,14 +56,15 @@ public class Box extends Item{
             System.out.println("\n Чтобы что-нибудь вытащить из коробки, её сначала нужно открыть!");
     }
 
-    void openBox(){
+    @Override
+    public void openBox(){
         if(this.openState != true){
             this.openState = true;
         } else
         System.out.println("\n Коробка уже открыта!");
     }
 
-    void closeBox(){
+    public void closeBox(){
         if(this.openState != false){
             this.openState = false;
         } else

@@ -1,10 +1,8 @@
-//import com.sun.org.apache.xpath.internal.operations.Bool;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class BoxTest {
+public class BoxTest {
     Box box = new Box("Коробка", 2.0d, 4,true, 20.0d, false);
 
     Item item1 = new Item("Мяч1", 0.5d, 4,false);
@@ -15,7 +13,7 @@ class BoxTest {
 
 
     @Test
-    void putIn() {
+    public void putIn() {
         box.openBox();
         try {
             box.putIn(item1);
@@ -23,15 +21,15 @@ class BoxTest {
             box.putIn(item3);
             box.putIn(item4);
         } catch (ItemStoreExeption e) {
-        e.printStackTrace();
-    }
+            e.printStackTrace();
+        }
         Double expected = 3.5d;
         Double actual = box.weight;
         assertEquals(expected, actual);
     }
 
 //    @Test(expected=ItemStoreExeption.class)
-//    void putInException() {
+//    public void putInException() {
 //        try{
 //            box.putIn(item5);
 //        } catch (ItemStoreExeption e) {
@@ -40,15 +38,15 @@ class BoxTest {
 //    }
 
     @Test
-    void pullOut() {
+    public void pullOut() {
         box.openBox();
         try {
             box.putIn(item1);
             box.putIn(item2);
             box.putIn(item3);
         } catch (ItemStoreExeption e) {
-        e.printStackTrace();
-    }
+            e.printStackTrace();
+        }
         box.pullOut("Игрушка1");
         Double expected = 3.0d;
         Double actual = box.weight;
@@ -56,37 +54,37 @@ class BoxTest {
     }
 
     @Test
-    void testPullOut() {
+    public void testPullOut() {
         box.openBox();
         try {
             box.putIn(item1);
             box.putIn(item2);
             box.putIn(item3);
         } catch (ItemStoreExeption e) {
-        e.printStackTrace();
-    }
+            e.printStackTrace();
+        }
         box.pullOut();
-        Double expected = 3.0d;
+        Double expected = 2.8d;
         Double actual = box.weight;
         assertEquals(expected, actual);
     }
 
     @Test
-    void openBox() {
+    public void openBox() {
         box.openBox();
         Boolean expected = true;
         Boolean actual = box.getOpenState();
     }
 
     @Test
-    void closeBox() {
+    public void closeBox() {
         box.closeBox();
         Boolean expected = false;
         Boolean actual = box.getOpenState();
     }
 
     @Test
-    void testToString() {
+    public void testToString() {
         String isFlat = box.getFlat()? "является плоским.":"не является плоским.";
         String expected =  "\n============================================================================================================== \n" +
                 "Описание объекта: \n" +box.getName() + " с весом " + box.getWeight() +
