@@ -13,6 +13,13 @@ public class Item {
         this.amIinsideYet = false;//объект при создании никуда не помещён
     }
 
+    public void setAmIinsideYet(Boolean amIinsideYet) {
+        this.amIinsideYet = amIinsideYet;
+    }
+
+    public Boolean getAmIinsideYet() {
+        return amIinsideYet;
+    }
 
     public void setFlat(Boolean flat) {
         this.flat = flat;

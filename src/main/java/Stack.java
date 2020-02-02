@@ -12,10 +12,11 @@ public class Stack extends Item{
     }
 
     public void putIn(Item item) throws ItemStoreExeption {
-        if(this.stackArr.size()>=this.qt) {
-            throw new ItemStoreExeption("You exceed stack limits!");
+        if(this.stackArr.size()>=this.qt || getAmIinsideYet()==true) {
+            throw new ItemStoreExeption("You exceed stack limits or try to put in an item which is contained yet!");
         }
             if(item.getFlat()==true) {
+                item.setAmIinsideYet(true);
                 this.stackArr.add(0, item);
                 this.weight += item.getWeight();
             } else
@@ -32,6 +33,7 @@ public class Stack extends Item{
     public void pullOut(){
         int index = this.stackArr.size();
         Item item = this.stackArr.get(0);
+        item.setAmIinsideYet(false);
         this.weight -= item.getWeight();
         this.stackArr.remove(0);
 

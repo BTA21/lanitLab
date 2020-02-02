@@ -12,11 +12,12 @@ public class Box extends Item implements BoxI {
         this.openState = openState;
     }
     public void putIn(Item item) throws ItemStoreExeption {
-        if(this.limit<item.getWeight()) {
-            throw new ItemStoreExeption("You exceed bag limits!");
+        if(this.limit<item.getWeight()  || getAmIinsideYet()==true) {
+            throw new ItemStoreExeption("You exceed bag limits or try to put in an item which is contained yet!");
         }
             if(this.openState!=false){
-            this.boxArr.add(item);
+                item.setAmIinsideYet(true);
+                this.boxArr.add(item);
             this.limit -= item.getWeight();
             this.weight += item.getWeight();
             } else
@@ -30,6 +31,7 @@ public class Box extends Item implements BoxI {
             Random random = new Random();
             int index = random.nextInt(max);
             Item item = this.boxArr.get(index);
+            item.setAmIinsideYet(false);
             this.boxArr.remove(index);
             this.limit += item.getWeight();
             this.weight -= item.getWeight();
@@ -46,6 +48,7 @@ public class Box extends Item implements BoxI {
             for (int index = 0; index<this.boxArr.size(); index++){
                 Item item = this.boxArr.get(index);
                 if (item.getName()==name){
+                    item.setAmIinsideYet(false);
                     this.boxArr.remove(index);
                     this.limit += item.getWeight();
                     this.weight -= item.getWeight();

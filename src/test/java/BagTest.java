@@ -27,15 +27,15 @@ public class BagTest {
         assertEquals(expected, actual);
     }
 
-//    @Test(expected=ItemStoreExeption.class)
-//    public void putInException() {
-//        try{
-//            bag.putIn(item1);
-//            bag.putIn(item5);
-//        } catch (ItemStoreExeption e) {
-//            e.printStackTrace();
-//        }
-//    }
+    @Test(expected=ItemStoreExeption.class)
+    public void putInException() {
+        try{
+            bag.putIn(item1);
+            bag.putIn(item5);
+        } catch (ItemStoreExeption e) {
+            e.printStackTrace();
+        }
+    }
 
     @Test
     public void pullOut() {

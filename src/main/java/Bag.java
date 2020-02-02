@@ -10,12 +10,14 @@ public class Bag extends Item{
         this.limit = limit;
     }
     public void putIn(Item item) throws ItemStoreExeption {
-        if(this.limit<item.getWeight()) {
-            throw new ItemStoreExeption("You exceed bag limits!");
+        if(this.limit<item.getWeight() || item.getAmIinsideYet()==true) {
+            throw new ItemStoreExeption("You exceed bag limits or try to put in an item which is contained yet!");
         }
             this.bagArr.add(item);
+            item.setAmIinsideYet(true);
             this.limit -= item.getWeight();
             this.weight += item.getWeight();
+
     }
 
     public void pullOut(){
@@ -23,6 +25,7 @@ public class Bag extends Item{
         Random random = new Random();
         int index = random.nextInt(max);
         Item item = this.bagArr.get(index);
+        item.setAmIinsideYet(false);
         this.bagArr.remove(index);
         this.limit += item.getWeight();
         this.weight -= item.getWeight();
@@ -32,6 +35,7 @@ public class Bag extends Item{
         for (int index = 0; index<this.bagArr.size(); index++){
             Item item = this.bagArr.get(index);
             if (item.getName()==name){
+                item.setAmIinsideYet(false);
                 this.bagArr.remove(index);
                 this.limit += item.getWeight();
                 this.weight -= item.getWeight();
