@@ -1,6 +1,7 @@
 public class ItemStoreExeption extends Exception{
 
     public ItemStoreExeption() {
+
     }
 
     public ItemStoreExeption(String message) {

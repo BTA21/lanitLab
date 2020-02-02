@@ -13,40 +13,30 @@ public class BagTest {
     Item item5 = new Item("Книга1", 5d, 4,true);//  Плоский предмет
 
     @Test
-    public void putIn() {
-        try{
-            bag.putIn(item1);
-            bag.putIn(item2);
-            bag.putIn(item3);
-            bag.putIn(item4);
-        } catch (ItemStoreExeption e) {
-            e.printStackTrace();
-        }
+    public void putIn() throws ItemStoreExeption, InsideStateException{
+        bag.putIn(item1);
+        bag.putIn(item2);
+        bag.putIn(item3);
+        bag.putIn(item4);
         Double expected = 1.5d;
         Double actual = bag.weight;
         assertEquals(expected, actual);
     }
 
-    @Test(expected=ItemStoreExeption.class)
-    public void putInException() {
-        try{
-            bag.putIn(item1);
-            bag.putIn(item5);
-        } catch (ItemStoreExeption e) {
-            e.printStackTrace();
-        }
+    @Test(expected = ItemStoreExeption.class)
+    public void putInException() throws ItemStoreExeption, InsideStateException {
+        bag.putIn(item1);
+        bag.putIn(item5);
     }
 
     @Test
-    public void pullOut() {
-        try{
+    public void pullOut() throws ItemStoreExeption, InsideStateException {
+
             bag.putIn(item1);
             bag.putIn(item2);
             bag.putIn(item3);
             bag.putIn(item4);
-        } catch (ItemStoreExeption e) {
-            e.printStackTrace();
-        }
+
         bag.pullOut("Игрушка1");
         Double expected = 1.3d;
         Double actual = bag.weight;
@@ -54,15 +44,11 @@ public class BagTest {
     }
 
     @Test
-    public void testPullOut() {
-        try {
-            bag.putIn(item1);
-            bag.putIn(item2);
-            bag.putIn(item3);
-            bag.putIn(item4);
-        } catch (ItemStoreExeption e) {
-            e.printStackTrace();
-        }
+    public void testPullOut() throws ItemStoreExeption, InsideStateException {
+        bag.putIn(item1);
+        bag.putIn(item2);
+        bag.putIn(item3);
+        bag.putIn(item4);
         bag.pullOut();
         Double expected = 1.5;
         Double expected1 = 1.8;

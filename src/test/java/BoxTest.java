@@ -13,40 +13,29 @@ public class BoxTest {
 
 
     @Test
-    public void putIn() {
+    public void putIn() throws ItemStoreExeption, InsideStateException{
         box.openBox();
-        try {
-            box.putIn(item1);
-            box.putIn(item2);
-            box.putIn(item3);
-            box.putIn(item4);
-        } catch (ItemStoreExeption e) {
-            e.printStackTrace();
-        }
+        box.putIn(item1);
+        box.putIn(item2);
+        box.putIn(item3);
+        box.putIn(item4);
+
         Double expected = 3.5d;
         Double actual = box.weight;
         assertEquals(expected, actual);
     }
 
-//    @Test(expected=ItemStoreExeption.class)
-//    public void putInException() {
-//        try{
-//            box.putIn(item5);
-//        } catch (ItemStoreExeption e) {
-//            e.printStackTrace();
-//        }
-//    }
+    @Test(expected = ItemStoreExeption.class)
+    public void putInException() throws ItemStoreExeption, InsideStateException {
+            box.putIn(item5);
+    }
 
     @Test
-    public void pullOut() {
+    public void pullOut() throws ItemStoreExeption, InsideStateException{
         box.openBox();
-        try {
-            box.putIn(item1);
-            box.putIn(item2);
-            box.putIn(item3);
-        } catch (ItemStoreExeption e) {
-            e.printStackTrace();
-        }
+        box.putIn(item1);
+        box.putIn(item2);
+        box.putIn(item3);
         box.pullOut("Игрушка1");
         Double expected = 3.0d;
         Double actual = box.weight;
@@ -54,17 +43,13 @@ public class BoxTest {
     }
 
     @Test
-    public void testPullOut() {
+    public void testPullOut() throws ItemStoreExeption, InsideStateException{
         box.openBox();
-        try {
-            box.putIn(item1);
-            box.putIn(item2);
-            box.putIn(item3);
-        } catch (ItemStoreExeption e) {
-            e.printStackTrace();
-        }
+        box.putIn(item1);
+        box.putIn(item2);
+        box.putIn(item3);
         box.pullOut();
-        Double expected = 2.8d;
+        Double expected = 3d;
         Double actual = box.weight;
         assertEquals(expected, actual);
     }

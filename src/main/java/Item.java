@@ -1,11 +1,11 @@
 public class Item {
     private String name;
     protected Double weight;
-    private Integer volume;//объем
-    private Boolean flat;//плоский или нет
-    private Boolean amIinsideYet;//вложен ли куда-нибудь объект
+    private Integer volume; //объем
+    private Boolean flat; //плоский или нет
+    private Boolean amIinsideYet; //вложен ли куда-нибудь объект
 
-    Item(String name, Double weight, Integer volume, Boolean flat){
+    Item(String name, Double weight, Integer volume, Boolean flat) {
         this.name = name;
         this.weight = weight;
         this.volume = volume;
@@ -64,5 +64,4 @@ public class Item {
         "Описание объекта: \n" +this.name + " с весом " + this.weight +
                 ", имеющим объем " +this.volume + ", который " + isFlat;
     }
-
 }

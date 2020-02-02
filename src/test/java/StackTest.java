@@ -8,33 +8,27 @@ public class StackTest {
     Item item2 = new Item("Книга1", 0.5d, 4,true);//  Плоский предмет
     Item item3 = new Item("Книга2", 0.5d, 4,true);//  Плоский предмет
     Item item4 = new Item("Доска", 1d, 4,true);//  Плоский предмет
-    Item item5 = new Item("Игрушка2", 0.2d, 2,false);
+    Item item5 = new Item("Капитал", 5d, 2,true);//  Плоский предмет
     Item item6 = new Item("Книга3", 0.5d, 4,true);//  Плоский предмет
 
     @Test
-    public void putIn() {
-        try {
-            stack.putIn(item1);
-            stack.putIn(item2);
-            stack.putIn(item3);
-            stack.putIn(item4);
-        } catch (ItemStoreExeption e) {
-            e.printStackTrace();
-        }
+    public void putIn() throws ItemStoreExeption, InsideStateException {
+        stack.putIn(item1);
+        stack.putIn(item2);
+        stack.putIn(item3);
+        stack.putIn(item4);
         Double expected = 2d;
         Double actual = stack.weight;
         assertEquals(expected, actual);
     }
 
-//    @Test(expected=ItemStoreExeption.class)
-//    public void putInException() {
-//        try{
-//            stack.putIn(item1);
-//            stack.putIn(item5);
-//        } catch (ItemStoreExeption e) {
-//            e.printStackTrace();
-//        }
-//    }
+    @Test(expected = ItemStoreExeption.class)
+    public void putInException() throws ItemStoreExeption, InsideStateException {
+        stack.putIn(item2);
+        stack.putIn(item3);
+        stack.putIn(item4);
+        stack.putIn(item5);
+    }
 
     @Test
     public void putInQuestion1() {
@@ -44,30 +38,22 @@ public class StackTest {
     }
 
     @Test
-    public void putInQuestion2() {
-        try {
-            stack.putIn(item1);
-            stack.putIn(item2);
-            stack.putIn(item3);
-            stack.putIn(item4);
-        } catch (ItemStoreExeption e) {
-            e.printStackTrace();
-        }
+    public void putInQuestion2() throws ItemStoreExeption, InsideStateException{
+        stack.putIn(item1);
+        stack.putIn(item2);
+        stack.putIn(item3);
+        stack.putIn(item4);
         String actual = stack.putInQuestion();
         String expected = " Компьютер: Нет!";
         assertEquals(expected, actual);
     }
 
     @Test
-    public void pullOut() {
-        try {
-            stack.putIn(item1);
-            stack.putIn(item2);
-            stack.putIn(item3);
-            stack.putIn(item4);
-        } catch (ItemStoreExeption e) {
-            e.printStackTrace();
-        }
+    public void pullOut() throws ItemStoreExeption, InsideStateException{
+        stack.putIn(item1);
+        stack.putIn(item2);
+        stack.putIn(item3);
+        stack.putIn(item4);
         stack.pullOut();
         Double expected = 1d;
         Double actual = stack.weight;

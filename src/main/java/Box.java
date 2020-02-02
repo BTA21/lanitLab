@@ -6,16 +6,19 @@ public class Box extends Item implements BoxI {
     private Boolean openState;
     private ArrayList<Item> boxArr;
     Box(String name, Double weight, Integer volume, Boolean flat, Double limit, Boolean openState) {
-        super(name, weight, volume, flat=true);
+        super(name, weight, volume, flat = true);
         this.boxArr = new ArrayList<Item>(0);
         this.limit = limit;
         this.openState = openState;
     }
-    public void putIn(Item item) throws ItemStoreExeption {
-        if(this.limit<item.getWeight()  || getAmIinsideYet()==true) {
-            throw new ItemStoreExeption("You exceed bag limits or try to put in an item which is contained yet!");
+    public void putIn(Item item) throws ItemStoreExeption, InsideStateException {
+        if(this.limit < item.getWeight()) {
+            throw new ItemStoreExeption("You exceed bag limits!");
         }
-            if(this.openState!=false){
+        if(item.getAmIinsideYet() == true) {
+            throw new InsideStateException("You can not put the item which is contained somewhere yet!");
+        }
+            if(this.openState != false) {
                 item.setAmIinsideYet(true);
                 this.boxArr.add(item);
             this.limit -= item.getWeight();
@@ -25,8 +28,8 @@ public class Box extends Item implements BoxI {
     }
 
 
-    public void pullOut(){
-        if(this.openState!=false) {
+    public void pullOut() {
+        if(this.openState != false) {
             int max = this.boxArr.size();
             Random random = new Random();
             int index = random.nextInt(max);
@@ -43,11 +46,11 @@ public class Box extends Item implements BoxI {
         return openState;
     }
 
-    public void pullOut(String name){
-        if(this.openState!=false) {
-            for (int index = 0; index<this.boxArr.size(); index++){
+    public void pullOut(String name) {
+        if(this.openState != false) {
+            for (int index = 0; index < this.boxArr.size(); index++) {
                 Item item = this.boxArr.get(index);
-                if (item.getName()==name){
+                if (item.getName() == name) {
                     item.setAmIinsideYet(false);
                     this.boxArr.remove(index);
                     this.limit += item.getWeight();
@@ -58,17 +61,15 @@ public class Box extends Item implements BoxI {
         } else
             System.out.println("\n Чтобы что-нибудь вытащить из коробки, её сначала нужно открыть!");
     }
-
     @Override
-    public void openBox(){
-        if(this.openState != true){
+    public void openBox() {
+        if(this.openState != true) {
             this.openState = true;
         } else
         System.out.println("\n Коробка уже открыта!");
     }
-
-    public void closeBox(){
-        if(this.openState != false){
+    public void closeBox() {
+        if(this.openState != false) {
             this.openState = false;
         } else
             System.out.println("\n Коробка уже закрыта!");
