@@ -16,10 +16,10 @@ public class Item {
     private Boolean amIinsideYet;
     /**
      * Конструктор - создание нового объектас определенными значениями
-     * @param name - наименование объекта
-     * @param weight - вес
-     * @param volume - объем
-     * @param flat - плоскость
+     * @param name  наименование объекта
+     * @param weight  вес
+     * @param volume  объем
+     * @param flat  плоскость
      * @see Item#Item(String, Double, Integer, Boolean)
      */
     Item(String name, Double weight, Integer volume, Boolean flat) {
@@ -28,13 +28,13 @@ public class Item {
         this.volume = volume;
         this.flat = flat;
         /**
-         * {@value} amIinsideYet - объект при создании никуда не помещён!
+         * {@value} amIinsideYet объект при создании никуда не помещён!
          */
         this.amIinsideYet = false;
     }
     /**
      * Процедура определения является ли объект вложенным или нет {@link Item#amIinsideYet}
-     * @param amIinsideYet - вложенность
+     * @param amIinsideYet вложенность
      */
     public void setAmIinsideYet(Boolean amIinsideYet) {
         this.amIinsideYet = amIinsideYet;
@@ -48,14 +48,14 @@ public class Item {
     }
     /**
      * Процедура определения является ли объект плоским или нет {@link Item#flat}
-     * @param flat - плоскость
+     * @param flat плоскость
      */
     public void setFlat(Boolean flat) {
         this.flat = flat;
     }
     /**
      * Процедура определения объема {@link Item#volume}
-     * @param volume - объём
+     * @param volume объём
      */
     public void setVolume(Integer volume) {
         this.volume = volume;
@@ -69,14 +69,14 @@ public class Item {
     }
     /**
      * Процедура определения веса {@link Item#weight}
-     * @param weight - вес
+     * @param weight вес
      */
     public void setWeight(Double weight) {
         this.weight = weight;
     }
     /**
      * Процедура определения наименования объекта {@link Item#name}
-     * @param name - наименование
+     * @param name наименование
      */
     public void setName(String name) {
         this.name = name;
@@ -109,7 +109,7 @@ public class Item {
         System.out.print(item);
     }
     /**
-     * Функция переопределения toString сех классов {@link Item}
+     * Функция переопределения toString для всех классов {@link Item}
      * @return возвращает значение веса объекта
      */
     public String toString() {

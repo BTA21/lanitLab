@@ -1,6 +1,8 @@
 Box.class
 Run.class
+BoxI.class
 Item.class
 Stack.class
 ItemStoreExeption.class
+InsideStateException.class
 Bag.class
