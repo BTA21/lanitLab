@@ -1,16 +1,14 @@
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class BagTest {
+public class BagTest {
     Bag bag = new Bag("Мешок", 0.1d, 10, false, 5.0d);
-
     Item item1 = new Item("Мяч1", 0.5d, 4,false);
     Item item2 = new Item("Игрушка1", 0.2d, 2,false);
     Item item3 = new Item("Мяч2", 0.5d, 4,false);
     Item item4 = new Item("Игрушка2", 0.2d, 2,false);
     Item item5 = new Item("Книга1", 5d, 4,true);//  Плоский предмет
-
     @Test
     void putIn() {
         try{
@@ -25,24 +23,22 @@ class BagTest {
         Double actual = bag.weight;
         assertEquals(expected, actual);
     }
-
-//    @Test(expected=ItemStoreExeption.class)
-//    void putInException() {
-//        try{
-//            bag.putIn(item1);
-//            bag.putIn(item5);
-//        } catch (ItemStoreExeption e) {
-//            e.printStackTrace();
-//        }
-//    }
-
+    @Test(expected=ItemStoreExeption.class)
+    void putInException() {
+        try{
+            bag.putIn(item1);
+            bag.putIn(item5);
+        } catch (ItemStoreExeption e) {
+            e.printStackTrace();
+        }
+    }
     @Test
     void pullOut() {
         try{
-        bag.putIn(item1);
-        bag.putIn(item2);
-        bag.putIn(item3);
-        bag.putIn(item4);
+            bag.putIn(item1);
+            bag.putIn(item2);
+            bag.putIn(item3);
+            bag.putIn(item4);
         } catch (ItemStoreExeption e) {
             e.printStackTrace();
         }
@@ -51,14 +47,13 @@ class BagTest {
         Double actual = bag.weight;
         assertEquals(expected, actual);
     }
-
     @Test
     void testPullOut() {
         try {
-        bag.putIn(item1);
-        bag.putIn(item2);
-        bag.putIn(item3);
-        bag.putIn(item4);
+            bag.putIn(item1);
+            bag.putIn(item2);
+            bag.putIn(item3);
+            bag.putIn(item4);
         } catch (ItemStoreExeption e) {
             e.printStackTrace();
         }
@@ -68,7 +63,6 @@ class BagTest {
         Double actual = bag.weight;
         assertEquals(expected, expected1, actual);
     }
-
     @Test
     void testToString() {
         String isFlat = bag.getFlat()? "является плоским.":"не является плоским.";
@@ -78,5 +72,4 @@ class BagTest {
         String actual =bag.toString();
         assertEquals(expected, actual);
     }
-
-  }
+}
