@@ -49,7 +49,7 @@ public class BoxTest {
         box.putIn(item2);
         box.putIn(item3);
         box.pullOut();
-        Double expected = 3d;
+        Double expected = 2.8d;
         Double actual = box.weight;
         assertEquals(expected, actual);
     }
