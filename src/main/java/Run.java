@@ -1,6 +1,6 @@
 public class Run {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ItemStoreExeption, InsideStateException{
 
 //        Предметы
         Item item1 = new Item("Мяч1", 0.5d, 4,false);
@@ -25,14 +25,12 @@ public class Run {
 //        item1.getInfo(item1);
 //        Работа с мешками
         bag1.getInfo(bag1);
-        try {
+
             bag1.putIn(item1);
             bag1.putIn(item2);
             bag1.putIn(item3);
             bag1.putIn(item4);
-        } catch (ItemStoreExeption e){
-        e.printStackTrace();
-    }
+
         bag1.getInfoInside();
 
         bag1.getInfo(bag1);
@@ -58,7 +56,7 @@ public class Run {
 //    }
 //        stack1.getInfoInside();
 //
-//        stack1.getInfo(stack1);
+        stack1.getInfo(stack1);
 //
 //        stack1.putInQuestion();
 //

@@ -1,36 +1,42 @@
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
-public class Stack extends Item{
+public class Stack extends Item {
     private Integer qt;
     private ArrayList<Item> stackArr;
     private Integer counter;
     Stack(String name, Double weight, Integer volume, Boolean flat, Integer qt) {
-        super(name, weight, volume, flat);
+        super(name, weight = 0d, volume, flat);
         this.qt = qt;
-        this.stackArr = new ArrayList<Item>(qt);;
+        this.stackArr = new ArrayList<Item>(qt);
     }
 
-    public void putIn(Item item) throws ItemStoreExeption {
-        if(this.stackArr.size()>=this.qt) {
+    public void putIn(Item item) throws ItemStoreExeption, InsideStateException {
+        if(this.stackArr.size() >= this.qt) {
             throw new ItemStoreExeption("You exceed stack limits!");
         }
-            if(item.getFlat()==true) {
+        if(item.getAmIinsideYet() == true) {
+            throw new InsideStateException("You can not put the item which is contained somewhere yet!");
+        }
+            if(item.getFlat() == true) {
+                item.setAmIinsideYet(true);
                 this.stackArr.add(0, item);
                 this.weight += item.getWeight();
             } else
                 System.out.println("\n Стопки можно складывать только из плоских предметов!");
     }
 
-    public String putInQuestion(){
+    public String putInQuestion() {
         System.out.println("\n Пользователь: Можно ли дополнить стопку?");
-        String answer = (this.stackArr.size()<this.qt)?" Компьютер: Да!":" Компьютер: Нет!";
+        String answer = (this.stackArr.size() < this.qt)?" Компьютер: Да!":" Компьютер: Нет!";
         System.out.println(answer);
         return answer;
     }
 
-    public void pullOut(){
+    public void pullOut() {
         int index = this.stackArr.size();
         Item item = this.stackArr.get(0);
+        item.setAmIinsideYet(false);
         this.weight -= item.getWeight();
         this.stackArr.remove(0);
 
@@ -48,5 +54,4 @@ public class Stack extends Item{
             System.out.println(anArray);
         }
     }
-
 }
