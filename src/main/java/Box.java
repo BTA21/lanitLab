@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Random;
 /**
  * Класс объекта-коробки со свойствами <b>name</b>, <b>weight</b>, <b>volume</b>, <b>flat</b>, <b>limit</b>, <b>boxArr</b>, <b>openState</b> и <b>amIinsideYet</b>.
- * @autor Набиев Азамат Ильдусович
+ * @author Набиев Азамат Ильдусович
  * @version 1.1
  */
 public class Box extends Item implements BoxI {
@@ -19,6 +19,7 @@ public class Box extends Item implements BoxI {
      * @param volume  объем
      * @param flat  плоскость
      * @param limit  лимит веса
+     * @param openState свойство определяющее открыта коробка или нет
      * @see Box#Box(String, Double, Integer, Boolean, Double, Boolean)
      */
     Box(String name, Double weight, Integer volume, Boolean flat, Double limit, Boolean openState) {
@@ -121,6 +122,7 @@ public class Box extends Item implements BoxI {
     }
     /**
      * Функция вывода значениий объекта-коробки {@link Box}
+     * @param box коробка
      */
     void getInfo(Item box) {
         super.getInfo(box);

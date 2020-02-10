@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.stream.Stream;
 /**
  * Класс объекта-стопки со свойствами <b>name</b>, <b>weight</b>, <b>volume</b>, <b>flat</b>, <b>qt</b>, <b>stackArr</b>, <b>openState</b> и <b>amIinsideYet</b>.
- * @autor Набиев Азамат Ильдусович
+ * @author Набиев Азамат Ильдусович
  * @version 1.1
  */
 public class Stack extends Item {
@@ -52,6 +52,7 @@ public class Stack extends Item {
     }
     /**
      * Функция отвечающая на вопрос:"Можно ли дополнить стопку?"
+     * @return answer возвращает ответ на вопрос
      */
     public String putInQuestion() {
         System.out.println("\n Пользователь: Можно ли дополнить стопку?");
@@ -71,6 +72,7 @@ public class Stack extends Item {
     }
     /**
      * Функция вывода значениий объекта-стопки {@link Stack}
+     * @param stack стопка
      */
     void getInfo(Item stack) {
         super.getInfo(stack);

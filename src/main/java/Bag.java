@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Random;
 /**
  * Класс объекта-сумка со свойствами <b>name</b>, <b>weight</b>, <b>volume</b>, <b>flat</b>, <b>limit</b>, <b>bagArr</b> и <b>amIinsideYet</b>.
- * @autor Набиев Азамат Ильдусович
+ * @author Набиев Азамат Ильдусович
  * @version 1.1
  */
 public class Bag extends Item {
@@ -79,6 +79,7 @@ public class Bag extends Item {
     }
     /**
      * Функция вывода значениий объекта-сумки {@link Bag}
+     * @param bag сумка
      */
     void getInfo(Item bag) {
         super.getInfo(bag);

@@ -1,6 +1,6 @@
 /**
  * Класс объекта со свойствами <b>name</b>, <b>weight</b>, <b>volume</b>, <b>flat</b> и <b>amIinsideYet</b>.
- * @autor Набиев Азамат Ильдусович
+ * @author Набиев Азамат Ильдусович
  * @version 1.1
  */
 public class Item {
@@ -104,6 +104,7 @@ public class Item {
     }
     /**
      * Функция вывода значениий объекта {@link Item}
+     * @param item объект
      */
     void getInfo(Item item){
         System.out.print(item);
