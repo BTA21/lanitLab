@@ -1,5 +1,15 @@
+/**
+ * Класс для работы.
+ * @autor Набиев Азамат Ильдусович
+ * @version 1.1
+ */
 public class Run {
-
+    /**
+     * Процедура являющаяся точкой входа для выполняемой программы
+     * @param args
+     * @throws InsideStateException исключение срабатывающее, если вложенный объект пытаются поместить куда-то ещё
+     * @throws ItemStoreExeption исключение срабатывающее, если пытаются поместить оюъект, который превышает лимиты вложенности
+     */
     public static void main(String[] args) throws ItemStoreExeption, InsideStateException{
 
 //        Предметы

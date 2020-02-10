@@ -1,0 +1,241 @@
+[ {
+  "uid" : "f727802ac6a6866e",
+  "name" : "testToString",
+  "time" : {
+    "start" : 1580844322149,
+    "stop" : 1580844322149,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bdf0e5a43daa9513",
+  "name" : "testToString",
+  "time" : {
+    "start" : 1580844321979,
+    "stop" : 1580844321979,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "93d68040d4e2bafb",
+  "name" : "testPullOut",
+  "time" : {
+    "start" : 1580844322009,
+    "stop" : 1580844322010,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "61e915c9d9a023b3",
+  "name" : "putIn",
+  "time" : {
+    "start" : 1580844321995,
+    "stop" : 1580844321995,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1fa24b5ada73f762",
+  "name" : "putIn",
+  "time" : {
+    "start" : 1580844322158,
+    "stop" : 1580844322158,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d5ca03a1042c94ea",
+  "name" : "testPullOut",
+  "time" : {
+    "start" : 1580844321989,
+    "stop" : 1580844321989,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b9028e653f3cb8bd",
+  "name" : "putInException",
+  "time" : {
+    "start" : 1580844322001,
+    "stop" : 1580844322001,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9e8bbc50bad6afb4",
+  "name" : "pullOut",
+  "time" : {
+    "start" : 1580844322012,
+    "stop" : 1580844322013,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c114eb018d04c1b0",
+  "name" : "testToString",
+  "time" : {
+    "start" : 1580844322024,
+    "stop" : 1580844322024,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6ed6ff188b9380ab",
+  "name" : "testToString",
+  "time" : {
+    "start" : 1580844322033,
+    "stop" : 1580844322034,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "140999d6a52b2b52",
+  "name" : "getWeight",
+  "time" : {
+    "start" : 1580844322142,
+    "stop" : 1580844322142,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e121118ad8c047ad",
+  "name" : "putIn",
+  "time" : {
+    "start" : 1580844322016,
+    "stop" : 1580844322016,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2f7dd6aadd533d6f",
+  "name" : "getVolume",
+  "time" : {
+    "start" : 1580844322140,
+    "stop" : 1580844322140,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a73e5343adeffa39",
+  "name" : "putInException",
+  "time" : {
+    "start" : 1580844321896,
+    "stop" : 1580844321899,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cc9026e867ff6e4e",
+  "name" : "putInQuestion1",
+  "time" : {
+    "start" : 1580844322151,
+    "stop" : 1580844322151,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f9ced3321705df4b",
+  "name" : "closeBox",
+  "time" : {
+    "start" : 1580844322018,
+    "stop" : 1580844322020,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e96faadffd32e15b",
+  "name" : "pullOut",
+  "time" : {
+    "start" : 1580844322155,
+    "stop" : 1580844322156,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "852e856eeb31f09f",
+  "name" : "openBox",
+  "time" : {
+    "start" : 1580844322004,
+    "stop" : 1580844322004,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5a1d217707f33c7e",
+  "name" : "getFlat",
+  "time" : {
+    "start" : 1580844322042,
+    "stop" : 1580844322042,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f7e93f8a4ec46cc3",
+  "name" : "testToString",
+  "time" : {
+    "start" : 1580844322007,
+    "stop" : 1580844322007,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7ab75e6889c72d8f",
+  "name" : "getName",
+  "time" : {
+    "start" : 1580844322045,
+    "stop" : 1580844322045,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "abc8a807b9e67be4",
+  "name" : "putInException",
+  "time" : {
+    "start" : 1580844322146,
+    "stop" : 1580844322147,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3e458b6bcffc8efd",
+  "name" : "putInQuestion2",
+  "time" : {
+    "start" : 1580844322153,
+    "stop" : 1580844322153,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3d690adf4006b50",
+  "name" : "pullOut",
+  "time" : {
+    "start" : 1580844321992,
+    "stop" : 1580844321992,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

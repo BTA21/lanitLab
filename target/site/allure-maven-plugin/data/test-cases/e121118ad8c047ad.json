@@ -1,0 +1,55 @@
+{
+  "uid" : "e121118ad8c047ad",
+  "name" : "putIn",
+  "fullName" : "BoxTest.putIn",
+  "historyId" : "6f72aa2c02645578a75e95814415fb0",
+  "time" : {
+    "start" : 1580844322016,
+    "stop" : 1580844322016,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "BoxTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "putIn"
+  }, {
+    "name" : "suite",
+    "value" : "BoxTest"
+  }, {
+    "name" : "host",
+    "value" : "MasterAdmin-PC"
+  }, {
+    "name" : "thread",
+    "value" : "7528@MasterAdmin-PC.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e121118ad8c047ad.json",
+  "parameterValues" : [ ]
+}

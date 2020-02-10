@@ -1,0 +1,55 @@
+{
+  "uid" : "b9028e653f3cb8bd",
+  "name" : "putInException",
+  "fullName" : "BoxTest.putInException",
+  "historyId" : "39f43fd6de8e07c52f3790509d6b038c",
+  "time" : {
+    "start" : 1580844322001,
+    "stop" : 1580844322001,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "BoxTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "putInException"
+  }, {
+    "name" : "suite",
+    "value" : "BoxTest"
+  }, {
+    "name" : "host",
+    "value" : "MasterAdmin-PC"
+  }, {
+    "name" : "thread",
+    "value" : "7528@MasterAdmin-PC.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b9028e653f3cb8bd.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,55 @@
+{
+  "uid" : "f727802ac6a6866e",
+  "name" : "testToString",
+  "fullName" : "StackTest.testToString",
+  "historyId" : "483ed0944b6c93762b70d2d2501a9c13",
+  "time" : {
+    "start" : 1580844322149,
+    "stop" : 1580844322149,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "StackTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testToString"
+  }, {
+    "name" : "suite",
+    "value" : "StackTest"
+  }, {
+    "name" : "host",
+    "value" : "MasterAdmin-PC"
+  }, {
+    "name" : "thread",
+    "value" : "7528@MasterAdmin-PC.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f727802ac6a6866e.json",
+  "parameterValues" : [ ]
+}

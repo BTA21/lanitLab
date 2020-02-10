@@ -1,0 +1,55 @@
+{
+  "uid" : "93d68040d4e2bafb",
+  "name" : "testPullOut",
+  "fullName" : "BoxTest.testPullOut",
+  "historyId" : "42f593626b20a9b2bb48999caeb89016",
+  "time" : {
+    "start" : 1580844322009,
+    "stop" : 1580844322010,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "BoxTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testPullOut"
+  }, {
+    "name" : "suite",
+    "value" : "BoxTest"
+  }, {
+    "name" : "host",
+    "value" : "MasterAdmin-PC"
+  }, {
+    "name" : "thread",
+    "value" : "7528@MasterAdmin-PC.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "93d68040d4e2bafb.json",
+  "parameterValues" : [ ]
+}

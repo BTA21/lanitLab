@@ -1,0 +1,55 @@
+{
+  "uid" : "f7e93f8a4ec46cc3",
+  "name" : "testToString",
+  "fullName" : "BoxTest.testToString",
+  "historyId" : "c966168885ebbe1d44c5ba1396c0e2be",
+  "time" : {
+    "start" : 1580844322007,
+    "stop" : 1580844322007,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "BoxTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testToString"
+  }, {
+    "name" : "suite",
+    "value" : "BoxTest"
+  }, {
+    "name" : "host",
+    "value" : "MasterAdmin-PC"
+  }, {
+    "name" : "thread",
+    "value" : "7528@MasterAdmin-PC.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f7e93f8a4ec46cc3.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,55 @@
+{
+  "uid" : "abc8a807b9e67be4",
+  "name" : "putInException",
+  "fullName" : "StackTest.putInException",
+  "historyId" : "ec07e8e2b7d0961c1428573f5bd9cda",
+  "time" : {
+    "start" : 1580844322146,
+    "stop" : 1580844322147,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "StackTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "putInException"
+  }, {
+    "name" : "suite",
+    "value" : "StackTest"
+  }, {
+    "name" : "host",
+    "value" : "MasterAdmin-PC"
+  }, {
+    "name" : "thread",
+    "value" : "7528@MasterAdmin-PC.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "abc8a807b9e67be4.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,55 @@
+{
+  "uid" : "a73e5343adeffa39",
+  "name" : "putInException",
+  "fullName" : "BagTest.putInException",
+  "historyId" : "44352f865a53ff4bb47664a81c8d2269",
+  "time" : {
+    "start" : 1580844321896,
+    "stop" : 1580844321899,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "BagTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "putInException"
+  }, {
+    "name" : "suite",
+    "value" : "BagTest"
+  }, {
+    "name" : "host",
+    "value" : "MasterAdmin-PC"
+  }, {
+    "name" : "thread",
+    "value" : "7528@MasterAdmin-PC.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a73e5343adeffa39.json",
+  "parameterValues" : [ ]
+}

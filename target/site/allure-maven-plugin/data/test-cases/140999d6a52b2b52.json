@@ -1,0 +1,55 @@
+{
+  "uid" : "140999d6a52b2b52",
+  "name" : "getWeight",
+  "fullName" : "ItemTest.getWeight",
+  "historyId" : "f1a06f39be27730b7f07d9dfc2391c39",
+  "time" : {
+    "start" : 1580844322142,
+    "stop" : 1580844322142,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "ItemTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "getWeight"
+  }, {
+    "name" : "suite",
+    "value" : "ItemTest"
+  }, {
+    "name" : "host",
+    "value" : "MasterAdmin-PC"
+  }, {
+    "name" : "thread",
+    "value" : "7528@MasterAdmin-PC.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "140999d6a52b2b52.json",
+  "parameterValues" : [ ]
+}

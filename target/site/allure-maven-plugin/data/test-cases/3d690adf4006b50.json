@@ -1,0 +1,55 @@
+{
+  "uid" : "3d690adf4006b50",
+  "name" : "pullOut",
+  "fullName" : "BagTest.pullOut",
+  "historyId" : "f8b32209df81ca3bc26401b98b0c241b",
+  "time" : {
+    "start" : 1580844321992,
+    "stop" : 1580844321992,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "BagTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "pullOut"
+  }, {
+    "name" : "suite",
+    "value" : "BagTest"
+  }, {
+    "name" : "host",
+    "value" : "MasterAdmin-PC"
+  }, {
+    "name" : "thread",
+    "value" : "7528@MasterAdmin-PC.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3d690adf4006b50.json",
+  "parameterValues" : [ ]
+}
